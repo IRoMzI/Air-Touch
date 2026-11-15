@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirTouch | Spatial Interface</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Space+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Paths updated to css folder -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="image-modal">
+        <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000&auto=format&fit=crop" alt="Opened Photo">
+        <button id="close-modal" onclick="closeModal()">Close Photo</button>
+    </div>
+
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <h2>Initializing AirTouch...</h2>
+    </div>
+
+    <div id="hud">
+        <div class="hud-item" id="hud-state">STATE: IDLE</div>
+    </div>
+
+    <div id="cursor-core"></div>
+    <div id="cursor-ring"></div>
+
+    <div class="camera-container">
+        <video id="webcam" autoplay playsinline></video>
+        <canvas id="output_canvas"></canvas>
+        <div class="radar-grid"></div>
+        <div id="status-badge">ACTIVE</div>
+    </div>
+
+    <main class="ui-container">
+        <header>
+            <h1>Air<span>Touch</span></h1>
+            <p>☝️ Point to move. 🤏 <b>Pinch & Release</b> to Click. 🤏 <b>Pinch & Hold</b> to Drag. ✌️ Two fingers to Scroll.</p>
+        </header>
+
+        <div class="grid">
+            <button class="glass-card" id="click-test-btn" onclick="triggerClickTest()">
+                <h2>Click Test</h2>
+                <p>Pinch on me to change my color!</p>
+            </button>
+
+            <div class="glass-card draggable" style="border-color: #ffaa00;">
+                <h2 style="color: #ffaa00;">✊ Drag Me</h2>
+                <p>Pinch and HOLD on me, then move your hand. Release to drop me.</p>
+            </div>
+
+            <button class="glass-card" onclick="openModal()">
+                <h2>Open Photo</h2>
+                <p>Pinch to view high-res image</p>
+            </button>
+            
+            <button class="glass-card" onclick="document.body.classList.toggle('light-mode')">
+                <h2>Toggle Theme</h2>
+                <p>Switch between dark and light mode</p>
+            </button>
+            
+            <div style="height: 400px; grid-column: span 2; display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
+                (Hold up two fingers to scroll here)
+            </div>
+        </div>
+    </main>
+
+    <!-- Path updated to js folder -->
+    <script src="js/script.js"></script>
+</body>
+</html>
