@@ -4,7 +4,7 @@ A touchless web interface that allows users to control a webpage using hand gest
  
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Live Demo:** [https://mohamxd-fathy.github.io/Air-Touch/](https://mohamxd-fathy.github.io/Air-Touch/)
+**Live Demo:** [https://iromzi.github.io/Air-Touch/](https://iromzi.github.io/Air-Touch//)
 
 ![AirTouch Demo](assets/demo.gif)
 
