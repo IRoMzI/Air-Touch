@@ -2,7 +2,7 @@
 
 A touchless web interface that allows users to control a webpage using hand gestures via their webcam. Built entirely with Vanilla JavaScript and MediaPipe.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+**Live Demo:** [https://mohamxd-fathy.github.io/Air-Touch/](https://mohamxd-fathy.github.io/Air-Touch/)
 
 ![AirTouch Demo](assets/demo.gif)
 
@@ -44,4 +44,4 @@ Because web browsers require an HTTPS connection or `localhost` to access the we
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Mohamxd-Fathy/Air-Touch-.git
+   git clone https://github.com/Mohamxd-Fathy/Air-Touch.git
